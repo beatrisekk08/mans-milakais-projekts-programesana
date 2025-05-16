@@ -1,24 +1,25 @@
-
 function calculateAverage() {
-    let inputs = document.querySelectorAll('#gradeForm input');
-    let grades = [];
-    
-    for (let i = 0; i < inputs.length; i++) {
-        let value = parseFloat(inputs[i].value);
-        
-        if (isNaN(value) || value < 1 || value > 10) {
-            alert("Lūdzu, ievadiet skaitļus no 1 līdz 10 visos laukos.");
-            return;
-        }
-        
-        grades.push(value);
-    }
+  const marks = [
+    Number(document.getElementById("mark1").value),
+    Number(document.getElementById("mark2").value),
+    Number(document.getElementById("mark3").value)
+  ];
 
-    let sum = 0;
-    for (let i = 0; i < grades.length; i++) {
-        sum += grades[i];
+  for (let i = 0; i < marks.length; i++) {
+    if (marks[i] < 1 || marks[i] > 10 || isNaN(marks[i])) {
+      alert("Katrai atzīmei jābūt skaitlim no 1 līdz 10!");
+      return;
     }
+  }
 
-    let average = sum / grades.length;
-    document.getElementById("result").innerText = "Vidējā atzīme: " + average.toFixed(2);
+  let sum = 0;
+  for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
+  }
+
+  const average = (sum / marks.length).toFixed(2);
+  document.getElementById("result").innerText = `Vidējā atzīme: ${average}`;
 }
+
+    
+  
