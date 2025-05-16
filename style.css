@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f8;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, footer {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.left-content, .right-content {
+    width: 20%;
+    padding: 10px;
+}
+
+.center-content {
+    width: 60%;
+    padding: 10px;
+}
+
+input {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+function calculateAverage() {
+    let inputs = document.querySelectorAll('#gradeForm input');
+    let grades = [];
+    
+    for (let i = 0; i < inputs.length; i++) {
+        let value = parseFloat(inputs[i].value);
+        
+        if (isNaN(value) || value < 1 || value > 10) {
+            alert("Lūdzu, ievadiet skaitļus no 1 līdz 10 visos laukos.");
+            return;
+        }
+        
+        grades.push(value);
+    }
+
+    let sum = 0;
+    for (let i = 0; i < grades.length; i++) {
+        sum += grades[i];
+    }
+
+    let average = sum / grades.length;
+    document.getElementById("result").innerText = "Vidējā atzīme: " + average.toFixed(2);
