@@ -1,3 +1,6 @@
+javascript
+Copy
+Edit
 function calculateAverage() {
     let inputs = document.querySelectorAll('#gradeForm input');
     let grades = [];
@@ -17,3 +20,7 @@ function calculateAverage() {
     for (let i = 0; i < grades.length; i++) {
         sum += grades[i];
     }
+
+    let average = sum / grades.length;
+    document.getElementById("result").innerText = "Vidējā atzīme: " + average.toFixed(2);
+}
