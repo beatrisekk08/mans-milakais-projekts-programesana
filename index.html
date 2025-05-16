@@ -1,73 +1,32 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Vidējās atzīmes kalkulators</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Vidējo atzīmju kalkulators</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Vidējās atzīmes kalkulators</h1>
-    </header>
-    
-    <nav>
-        <a href="index.html">Sākums</a>
-        <a href="about.html">Par mums</a>
-        <a href="contact.html">Kontakti</a>
-    </nav>
+  <header><h1>Vidējo atzīmju kalkulators</h1></header>
+  <nav>
+    <a href="index.html">Sākums</a>
+    <a href="rezultats.html">Rezultāts</a>
+    <a href="kontakti.html">Par mums</a>
+  </nav>
 
-    <div class="container">
-        <div class="left-content">
-            <p>Ievadi savas pēdējās 5 atzīmes!</p>
-        </div>
+  <div id="left-content">
+    <label>Atzīme 1: <input type="number" id="mark1"></label><br>
+    <label>Atzīme 2: <input type="number" id="mark2"></label><br>
+    <label>Atzīme 3: <input type="number" id="mark3"></label><br>
+    <button onclick="calculateAverage()">Aprēķināt</button>
+  </div>
 
-        <div class="center-content">
-            <form id="gradeForm">
-                <input type="text" placeholder="Atzīme 1">
-                <input type="text" placeholder="Atzīme 2">
-                <input type="text" placeholder="Atzīme 3">
-                <input type="text" placeholder="Atzīme 4">
-                <input type="text" placeholder="Atzīme 5">
-                <button type="button" onclick="calculateAverage()">Aprēķināt</button>
-            </form>
-            <div id="result"></div>
-        </div>
+  <div id="right-content">
+    <p id="result">Vidējā atzīme: -</p>
+  </div>
 
-        <div class="right-content">
-            <img src="info.png" alt="Informācija" width="100">
-        </div>
-    </div>
+  <footer>© 2025 Vidējā Kalkulatora projekts</footer>
 
-    <footer>
-        <p>&copy; 2025 Projekts</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <title>Par mums</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header><h1>Par projektu</h1></header>
-    <p>Šis ir vienkāršs rīks, kas palīdz aprēķināt vidējo atzīmi.</p>
-    <footer><p>Autori: Anna Millere, Beatrise Kļaviņa, Adelīna amanda Bergmane, Amanda Šstekerhofa</p></footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <title>Kontakti</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header><h1>Sazinies ar mums</h1></header>
-    <p>E-pasts: info@projekts.lv</p>
-    <footer><p>Projekta kontaktinformācija</p></footer>
-</body>
-</html>
+
+
