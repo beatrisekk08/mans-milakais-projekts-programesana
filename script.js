@@ -6,8 +6,8 @@ function calculateAverage() {
   ];
 
   for (let i = 0; i < marks.length; i++) {
-    if (marks[i] < 1 || marks[i] > 10 || isNaN(marks[i])) {
-      alert("Katrai atzīmei jābūt skaitlim no 1 līdz 10!");
+    if (isNaN(marks[i]) || marks[i] < 1 || marks[i] > 10) {
+      alert("Lūdzu, ievadi atzīmes no 1 līdz 10 visos laukos.");
       return;
     }
   }
@@ -20,6 +20,3 @@ function calculateAverage() {
   const average = (sum / marks.length).toFixed(2);
   document.getElementById("result").innerText = `Vidējā atzīme: ${average}`;
 }
-
-    
-  
