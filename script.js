@@ -1,6 +1,4 @@
-javascript
-Copy
-Edit
+
 function calculateAverage() {
     let inputs = document.querySelectorAll('#gradeForm input');
     let grades = [];
