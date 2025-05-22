@@ -1,83 +1,43 @@
 
-    body {
+body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
+  background: #f2f2f2;
 }
 
-header, nav, footer {
-  background-color: #005b99;
+header {
+  background: #333;
   color: white;
+  padding: 1em;
   text-align: center;
-  padding: 15px;
 }
 
-nav a {
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
 }
 
-h1, h2 {
-  margin: 0;
-}
-📄 layout.css
-css
-Copy
-Edit
-#left-content, #center-content, #right-content {
-  float: left;
+main {
   padding: 20px;
-  box-sizing: border-box;
-}
-
-#left-content {
-  width: 30%;
-  background-color: #ffffff;
-}
-
-#center-content {
-  width: 40%;
-  background-color: #e8f4fc;
-}
-
-#right-content {
-  width: 30%;
-  background-color: #ffffff;
+  text-align: center;
 }
 
 footer {
-  clear: both;
-  background-color: #005b99;
+  background: #333;
   color: white;
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-}
-📄 script.js
-javascript
-Copy
-Edit
-function calculateAverage() {
-  const marks = [
-    Number(document.getElementById("mark1").value),
-    Number(document.getElementById("mark2").value),
-    Number(document.getElementById("mark3").value)
-  ];
-
-  for (let i = 0; i < marks.length; i++) {
-    if (isNaN(marks[i]) || marks[i] < 1 || marks[i] > 10) {
-      alert("Lūdzu, ievadi atzīmes no 1 līdz 10 visos laukos.");
-      return;
-    }
-  }
-
-  let sum = 0;
-  for (let i = 0; i < marks.length; i++) {
-    sum += marks[i];
-  }
-
-  const average = (sum / marks.length).toFixed(2);
-  document.getElementById("result").innerText = `Vidējā atzīme: ${average}`;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
