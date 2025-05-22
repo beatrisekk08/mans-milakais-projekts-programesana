@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sākums</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Vidējo Atzīmju Kalkulators</title>
+    <link rel="stylesheet" href="css/stils.css">
 </head>
 <body>
-  <header>
-    <h1>Vidējā atzīme kalkulators</h1>
+    <header>
+        <h1>Vidējo Atzīmju Kalkulators</h1>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Sākums</a></li>
-        <li><a href="about.html">Par mums</a></li>
-        <li><a href="contact.html">Kontakti</a></li>
-        <li><a href="calculator.html">Kalkulators</a></li>
-      </ul>
+        <a href="index.html">Sākums</a>
+        <a href="par-mums.html">Par mums</a>
+        <a href="palidziba.html">Palīdzība</a>
     </nav>
-  </header>
 
-  <main>
-    <div class="center-content">
-      <h2>Laipni lūdzam!</h2>
-      <p>Izmantojiet šo kalkulatoru, lai aprēķinātu savu vidējo atzīmi!</p>
+    <div id="left-content">
+        <h3>Instrukcija:</h3>
+        <p>Ievadi atzīmes atdalītas ar komatu (piemēram: 7, 9, 8).</p>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Vidējā atzīme kalkulators</p>
-  </footer>
+    <div id="center-content">
+        <input type="text" id="atzimes" placeholder="Ievadi atzīmes">
+        <button onclick="aprekinitVid()">Aprēķināt</button>
+        <p id="rezultats"></p>
+    </div>
+
+    <div id="right-content">
+        <img src="https://via.placeholder.com/150" alt="Attēls">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vidējo Atzīmju Kalkulators</p>
+    </footer>
+
+    <script src="js/kalkulators.js"></script>
 </body>
 </html>
+
