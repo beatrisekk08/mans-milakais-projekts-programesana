@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Palīdzība</title>
+    <link rel="stylesheet" href="css/dizains.css">
+</head>
+<body>
+    <header>
+        <h1>Palīdzības sadaļa</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="par-mums.html">Par mums</a>
+        <a href="palidziba.html">Palīdzība</a>
+    </nav>
+
+    <main>
+        <p>Lai aprēķinātu vidējo atzīmi:</p>
+        <ol>
+            <li>Ievadi atzīmes, atdalot tās ar komatu</li>
+            <li>Nospied "Aprēķināt"</li>
+            <li>Rezultāts parādīsies zem ievadlaukuma</li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vidējo Atzīmju Kalkulators</p>
+    </footer>
+</body>
+</html>
