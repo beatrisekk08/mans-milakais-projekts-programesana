@@ -1,0 +1,12 @@
+videjo-atzimju-kalkulators/
+│
+├── index.html
+├── par-mums.html
+├── palidziba.html
+│
+├── css/
+│   ├── stils.css
+│   └── dizains.css
+│
+├── js/
+│   └── kalkulators.js
