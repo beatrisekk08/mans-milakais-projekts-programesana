@@ -1,22 +1,26 @@
-function calculateAverage() {
-  const marks = [
-    Number(document.getElementById("mark1").value),
-    Number(document.getElementById("mark2").value),
-    Number(document.getElementById("mark3").value)
-  ];
+document.getElementById("calculator-form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  for (let i = 0; i < marks.length; i++) {
-    if (isNaN(marks[i]) || marks[i] < 1 || marks[i] > 10) {
-      alert("Lūdzu, ievadi atzīmes no 1 līdz 10 visos laukos.");
+  let grades = document.getElementById("grades").value.split(",").map(Number);
+  let weights = document.getElementById("weights").value.split(",").map(Number);
+
+  if (grades.length !== weights.length) {
+    alert("Atzīmju un svaru skaitam jāsakrīt!");
+    return;
+  }
+
+  let totalWeight = 0;
+  let weightedSum = 0;
+
+  for (let i = 0; i < grades.length; i++) {
+    if (isNaN(grades[i]) || isNaN(weights[i])) {
+      alert("Ievadiet tikai skaitļus!");
       return;
     }
+    weightedSum += grades[i] * weights[i];
+    totalWeight += weights[i];
   }
 
-  let sum = 0;
-  for (let i = 0; i < marks.length; i++) {
-    sum += marks[i];
-  }
-
-  const average = (sum / marks.length).toFixed(2);
-  document.getElementById("result").innerText = `Vidējā atzīme: ${average}`;
-}
+  let average = weightedSum / totalWeight;
+  document.getElementById("result").textContent = "Vidējā atzīme: " + average.toFixed(2);
+});
