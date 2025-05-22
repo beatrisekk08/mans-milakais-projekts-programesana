@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulators</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Kalkulators</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sākums</a></li>
+        <li><a href="about.html">Par mums</a></li>
+        <li><a href="contact.html">Kontakti</a></li>
+        <li><a href="calculator.html">Kalkulators</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Aprēķini savu vidējo atzīmi</h2>
+    <form id="calculator-form">
+      <label>Atzīmes (piem. 8,9,10):</label>
+      <input type="text" id="grades" required>
+      <label>Svari (piem. 1,2,1):</label>
+      <input type="text" id="weights" required>
+      <button type="submit">Aprēķināt</button>
+    </form>
+    <p id="result"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vidējā atzīme kalkulators</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
