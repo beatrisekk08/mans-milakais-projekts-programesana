@@ -2,40 +2,39 @@
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>Vidējo Atzīmju Kalkulators</title>
-    <link rel="stylesheet" href="css/stils.css">
+    <title>Vidējās atzīmes kalkulators</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Vidējo Atzīmju Kalkulators</h1>
+        <h1>Vidējās atzīmes kalkulators</h1>
     </header>
-
     <nav>
-        <a href="index.html">Sākums</a>
-        <a href="par-mums.html">Par mums</a>
-        <a href="palidziba.html">Palīdzība</a>
+        <ul>
+            <li><a href="index.html">Sākums</a></li>
+            <li><a href="about.html">Par projektu</a></li>
+            <li><a href="results.html">Rezultāti</a></li>
+        </ul>
     </nav>
-
-    <div id="left-content">
-        <h3>Instrukcija:</h3>
-        <p>Ievadi atzīmes atdalītas ar komatu (piemēram: 7, 9, 8).</p>
+    <div class="container">
+        <div class="left-content">
+            <!-- Papildinformācija/attēli -->
+        </div>
+        <div class="center-content">
+            <form id="atzimesForma">
+                <label for="atzimes">Ievadi atzīmes, atdalot ar komatiem (piem. 8,9,10,7):</label><br>
+                <input type="text" id="atzimes" name="atzimes"><br>
+                <button type="button" onclick="aprekinitVidAtzimi()">Aprēķināt</button>
+            </form>
+            <div id="rezultats"></div>
+        </div>
+        <div class="right-content">
+            <!-- Papildinformācija/attēli -->
+        </div>
     </div>
-
-    <div id="center-content">
-        <input type="text" id="atzimes" placeholder="Ievadi atzīmes">
-        <button onclick="aprekinitVid()">Aprēķināt</button>
-        <p id="rezultats"></p>
-    </div>
-
-    <div id="right-content">
-        <img src="https://via.placeholder.com/150" alt="Attēls">
-    </div>
-
     <footer>
-        <p>&copy; 2025 Vidējo Atzīmju Kalkulators</p>
+        <p>&copy; 2025 Projekts "Vidējās atzīmes kalkulators"</p>
     </footer>
-
     <script src="js/kalkulators.js"></script>
 </body>
 </html>
-
