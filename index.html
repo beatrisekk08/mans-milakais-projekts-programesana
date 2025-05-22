@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Vidējo atzīmju kalkulators</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Vidējo atzīmju kalkulators</h1></header>
+  <nav>
+    <a href="index.html">Sākums</a>
+    <a href="about.html">Par projektu</a>
+    <a href="contacts.html">Kontakti</a>
+  </nav>
+  <div class="container">
+    <div class="left-content">
+      <p>Šis rīks palīdz aprēķināt tavas atzīmes ātri un ērti.</p>
+    </div>
+    <div class="center-content">
+      <input type="text" id="grades" placeholder="Ievadi atzīmes, atdalītas ar komatiem">
+      <button onclick="calculateAverage()">Aprēķināt</button>
+      <p id="result"></p>
+    </div>
+    <div class="right-content">
+      <p>Padoms: Lieto punktu, nevis komatu (piemēram, 7.5), ja vēlies decimāldaļas.</p>
+    </div>
+  </div>
+  <footer>
+    <p>Izstrādāja: Amanda, Beatrise, Anna, Adelīna</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
